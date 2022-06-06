@@ -19,7 +19,7 @@
     background-color:bisque;
 }
 
-canvas {
+canvas , video {
     border: 3px  solid black;
     box-shadow: 5px 5px 15px 14px palevioletred;
 }
