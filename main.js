@@ -3,6 +3,8 @@ nosey=""
 leftwristx=""
 rightwristx=""
 
+difference=""
+
 function setup() {
     canvas=createCanvas(380 , 380)
     canvas.position(600 , 100)
@@ -26,5 +28,15 @@ function getposes(results) {
         leftwristx=results[0].pose.leftWrist.x
         rightwristx=results[0].pose.rightWrist.x
         console.log(leftwristx , rightwristx)
+        difference=floor(leftwristx-rightwristx)
     }
+}
+
+
+function draw() {
+    background("pink")
+    fill("yellow")
+    stroke("white")
+    square(nosex , nosey , difference)
+    document.getElementById("square_size").innerHTML="size of the square is " + difference + " px" 
 }
